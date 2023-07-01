@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Belajar JavaScript | NIOMIC</title>
+    <style media="screen">
+      .contoh1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" name="button" onclick="Tombol()">Laksanakan</button>
+    <br><br><hr>
+    Attribute <b>RemoveNamedItem()</b>
+    <br>
+    <input type="text" name="" value="Inputan"><br><hr>
+    Attribute <b>setNamedItem()</b>
+    <br>
+    <i>Contoh</i><br><hr>
+    Attribute <b>Value()</b>
+    <br>
+    <p id="teks1">Percontohan</p>
+
+    <script type="text/javascript">
+      function Tombol(){
+        var a = document.getElementsByTagName('input')[0];
+        a.attributes.removeNamedItem("value");
+
+        var b = document.getElementsByTagName('i')[0];
+        var c = document.createAttribute('class');
+        c.value = 'contoh1';
+        b.attributes.setNamedItem(c);
+
+        var e = document.getElementsByTagName('button')[0];
+        var f = e.attributes[0].value;
+        document.getElementById('teks1').innerHTML = f;
+      }
+    </script>
+  </body>
+</html>
